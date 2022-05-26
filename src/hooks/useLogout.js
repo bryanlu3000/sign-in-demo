@@ -11,8 +11,9 @@ const useLogout = () => {
         withCredentials: true
       });
       if (response.status === 204) {
-        console.log(response.status);
+        console.log(`useLogout: ${response}`);
       }
+      console.log('useLogout: No 204');
     } catch (err) {
       console.error(err);
     }
