@@ -113,7 +113,6 @@ export default function SignIn() {
     logout()
       .then(res => {
         setSuccess(false);
-        console.log('From singnIn');
       })
       .catch(err => console.error(err))
   }

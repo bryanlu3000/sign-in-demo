@@ -137,7 +137,8 @@ app.get('/api/logout', async (req, res) => {
         httpOnly: true, 
         sameSite: 'None', 
         secure: true 
-      }).status(204);
+      });
+      return res.sendStatus(204);
     }
 
     // Delete refreshToken with current user
@@ -150,7 +151,7 @@ app.get('/api/logout', async (req, res) => {
       sameSite: 'None', 
       secure: true 
     });
-    return res.status(204).json({message: 'Logout Success'});
+    return res.sendStatus(204);
   }
   catch (err) {
     res.status(500).json({'message': err.message});
