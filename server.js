@@ -184,7 +184,7 @@ app.post('/api/register', async (req, res) => {
       password: hashedPwd,
     });
     console.log(result);
-    return res.status(201).json({'Success': `New account created ===> ${email}`});
+    res.status(201).json({message: `Register Success ===> ${email}`});
   }
   catch (err) {
     res.status(500).json({'message': err.message});
