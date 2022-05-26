@@ -72,8 +72,8 @@ export default function SignUp() {
         .then(res => {
           if (res.status === 201) {
             setSuccess(true);
-            console.log(res.data.messsage);
           }
+          console.log(res.data.messsage);
         })
         .catch(err => {
           if (!err?.response) {
