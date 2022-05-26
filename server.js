@@ -150,7 +150,7 @@ app.get('/api/logout', async (req, res) => {
       sameSite: 'None', 
       secure: true 
     });
-    return res.sendStatus(204); //.json({message: 'Logout Success'});
+    return res.status(204).json({message: 'Logout Success'});
   }
   catch (err) {
     res.status(500).json({'message': err.message});
