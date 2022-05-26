@@ -94,7 +94,7 @@ export default function SignIn() {
             setSuccess(true);
           }
           console.log(res.data.message);
-          console.log(`accessToken: ${res.data.accessToken}`);
+          // console.log(`accessToken: ${res.data.accessToken}`);
         })
         .catch(err => {
           if (!err?.response) {

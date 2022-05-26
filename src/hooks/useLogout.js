@@ -10,7 +10,9 @@ const useLogout = () => {
       const response = await axios.get('/api/logout', {
         withCredentials: true
       });
-      console.log(response.data);
+      if (response.status === 204) {
+        console.log(response.data);
+      }
     } catch (err) {
       console.error(err);
     }

@@ -149,7 +149,8 @@ app.get('/api/logout', async (req, res) => {
       httpOnly: true, 
       sameSite: 'None', 
       secure: true 
-    }).json({message: 'Logout Success'});
+    });
+    res.status(204).json({message: 'Logout Success'});
   }
   catch (err) {
     res.status(500).json({'message': err.message});
@@ -183,7 +184,6 @@ app.post('/api/register', async (req, res) => {
       email,
       password: hashedPwd,
     });
-    console.log(result);
     res.status(201).json({message: `Register Success ===> ${email}`});
   }
   catch (err) {
