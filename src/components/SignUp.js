@@ -73,7 +73,7 @@ export default function SignUp() {
           if (res.status === 201) {
             setSuccess(true);
           }
-          console.log(res.data.messsage);
+          console.log(res);
         })
         .catch(err => {
           if (!err?.response) {
